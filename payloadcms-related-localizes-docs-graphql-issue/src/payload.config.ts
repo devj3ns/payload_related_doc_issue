@@ -23,6 +23,10 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, "generated-schema.graphql"),
   },
+  localization: {
+    locales: ["en", "de"],
+    defaultLocale: "de",
+  },
   plugins: [payloadCloud()],
   db: mongooseAdapter({
     url: process.env.DATABASE_URI,
